@@ -1,0 +1,17 @@
+create or replace procedure add_new_customer( 
+  customer_name in char, 	
+  customer_address in varchar2,
+  phone in varchar2, 	
+  email in varchar2)
+as
+begin
+
+  insert into customers 
+  (customer_name, customer_address,phone,email) 
+  values
+  (customer_name, customer_address,phone,email); 
+ 
+commit;
+
+end;
+

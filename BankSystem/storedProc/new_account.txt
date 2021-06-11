@@ -1,0 +1,17 @@
+create or replace procedure add_new_account
+ (customer_name in char,
+  customerid in number,
+  account_type in char,
+  account_status in char,
+  account_balance in number)
+as
+begin
+
+  insert into accounts
+  (customer_name, customerid,account_type, account_status, account_balance) 
+  values
+  (customer_name, customerid,account_type, account_status, account_balance); 
+  
+  commit;
+
+end;

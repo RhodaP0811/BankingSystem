@@ -1,0 +1,14 @@
+create or replace procedure update_account
+ (account_status in char,
+  account_balance in number,
+  acctno in number)
+as
+begin
+
+  update accounts set account_status=account_status, 
+                      account_balance=account_balance
+  where acctno = acctno;
+
+  commit;
+
+end;

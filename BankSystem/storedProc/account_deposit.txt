@@ -1,0 +1,19 @@
+create or replace procedure account_deposit
+ (account_status in char,
+  account_balance in number,
+  trantype in char,
+  tranamt in number,
+  acctno in number)
+as
+begin
+
+  update accounts set account_status=account_status, account_balance=account_balance
+  where acctno = acctno;
+  commit;
+
+  insert into transaction (trantype, tranamt, acctno)
+  values (trantype, tranamt, acctno);
+
+  commit;
+
+end;

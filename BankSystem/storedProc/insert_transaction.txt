@@ -1,0 +1,10 @@
+create or replace procedure insert_transaction
+ (trantype in char,
+  tranamt in number,
+  acctno in number)
+as
+begin
+
+  insert into transaction (trantype, tranamt, acctno)
+  values (trantype, tranamt, acctno);
+end;

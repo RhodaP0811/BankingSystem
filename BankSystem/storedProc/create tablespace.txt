@@ -1,0 +1,3 @@
+CREATE TABLESPACE bank 
+   DATAFILE 'bank_data.dbf' 
+   SIZE 100m;
